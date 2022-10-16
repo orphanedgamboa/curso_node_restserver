@@ -1,7 +1,7 @@
 const {response} = require('express');
 
 const userGet = (req, res = response)  => {
-
+    
     const {q, nombre='no name', apikey} = req.query;
     res.json({
      msg: 'get Api-controller',
@@ -12,9 +12,9 @@ const userGet = (req, res = response)  => {
 
 const userPost = (req, res = response) =>{
     //const body = req.body;
-    const {nombre, edad} = res.body;
+    const {nombre, edad} = req.body;
     res.json({
-     msg: 'get POST World',
+     msg: 'POST World',
      nombre, edad
     })
 }
